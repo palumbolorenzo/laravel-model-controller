@@ -8,8 +8,15 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body>
-    <h1>Home</h1>
-    @foreach ($movies as $movie)
-    @endforeach
+    <header>
+        <h1>Home</h1>
+    </header>
+    <main>
+        <ul>
+            @foreach ($movies as $movie)
+            <li class="card">{{ $movie->title }}</li>
+            @endforeach
+        </ul>
+    </main>
 </body>
 </html>
