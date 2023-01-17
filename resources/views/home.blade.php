@@ -14,7 +14,7 @@
     <main>
         <ul>
             @foreach ($movies as $movie)
-            <li class="card">{{ $movie->title }}</li>
+            <li class="card">Title: {{ $movie->title }} - Original Title: {{ $movie->original_title }} - Nationality: {{ $movie->nationality }} - Movie date: {{ $movie->date }} - Imdb: {{ $movie->vote }}</li>
             @endforeach
         </ul>
     </main>
