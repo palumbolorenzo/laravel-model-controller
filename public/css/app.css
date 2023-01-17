@@ -10830,6 +10830,7 @@ main {
 
 .cards-container {
   width: 900px;
+  margin: 3rem;
   display: flex;
   gap: 1rem;
 }
