@@ -9,14 +9,31 @@
 </head>
 <body>
     <header>
-        <h1>Home</h1>
+        <nav class="navbar bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                <img src="/docs/5.2/assets/brand/bootstrap-logo.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+                <h2 class="text-white">Movies</h2>
+                </a>
+            </div>
+        </nav>
     </header>
     <main>
-        <ul>
-            @foreach ($movies as $movie)
-            <li class="card">Title: {{ $movie->title }} - Original Title: {{ $movie->original_title }} - Nationality: {{ $movie->nationality }} - Movie date: {{ $movie->date }} - Imdb: {{ $movie->vote }}</li>
-            @endforeach
-        </ul>
+       <div class="cards-container row">
+       @foreach ($movies as $movie)
+        <div class="card cols-3 bg-dark" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title text-white">{{ $movie->title }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Original Title: {{ $movie->original_title }}</h6>
+                <p class="card-text text-white">Nationality: {{ $movie->nationality }}</p>
+                <p class="card-text text-white">Movie date: {{ $movie->date }}</p>
+                <p class="card-text text-white">Imdb: {{ $movie->vote }}</p>
+                <a href="#" class="card-link">More info</a>
+                <a href="#" class="card-link">Another link</a>
+            </div>
+        </div>
+        @endforeach
+       </div>
     </main>
 </body>
 </html>
